@@ -26,7 +26,7 @@ app.get("/reservations", function(req, res) {
 });
 
 app.get("/waiting-list", function(req, res){
-	res.sendFile(path.join(__dirname, "tables.html"));
+	res.sendFile(path.join(__dirname, "waiting-list.html"));
 })
 
 app.post("/api/new", function(req, res) {
@@ -36,8 +36,9 @@ app.post("/api/new", function(req, res) {
   		reservations.push(newReservation);
   	}
   	else {
-  		waiting-list.push(newReservation);
+  		waitinglist.push(newReservation);
   	}
+    res.json(newReservation);
 });
 
 app.listen(PORT, function() {
