@@ -10,12 +10,31 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 var reservations = [{
-	customerName: "Brian",
-	phoneNumber: "9085106980",
-	customerEmail: "kara",
-	customerID: "12"
+  customerName: "Brian",
+  phoneNumber: "9085106980",
+  customerEmail: "kara",
+  customerID: "1"
+},
+{
+  customerName: "Xiaoying",
+  phoneNumber: "9085106777",
+  customerEmail: "xiaoying@abc.com",
+  customerID: "2"
+}
+];
+
+var waitingList = [{
+  customerName: "Tom",
+  phoneNumber: "9085106980",
+  customerEmail: "Tom@aaa.com",
+  customerID: "2"
+},
+{
+  customerName: "Helen",
+  phoneNumber: "9085106777",
+  customerEmail: "helen@wild.com",
+  customerID: "1"
 }];
-var waitingList = [];
 
 app.get("/", function(req, res) {
   	res.sendFile(path.join(__dirname, "index.html"));
@@ -40,7 +59,15 @@ app.post("/api/new", function(req, res) {
   	}
 });
 
-app.listen(PORT, function() {
-  	console.log("App listening on PORT " + PORT);
+app.get("/api/tables", function(req, res) {
+    return res.json(reservations);
+});
+
+app.get("/api/waiting-list", function(req, res) {
+    return res.json(waitingList);
+});
+
+app.listen(port, function() {
+  	console.log("App listening on PORT " + port);
 });
 
