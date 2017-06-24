@@ -14,22 +14,19 @@ var reservations = [{
   phoneNumber: "9085106980",
   customerEmail: "kara",
   customerID: "1"
-},
-{
+},{
   customerName: "Xiaoying",
   phoneNumber: "9085106777",
   customerEmail: "xiaoying@abc.com",
   customerID: "2"
-}
-];
+}];
 
 var waitingList = [{
   customerName: "Tom",
   phoneNumber: "9085106980",
   customerEmail: "Tom@aaa.com",
   customerID: "2"
-},
-{
+},{
   customerName: "Helen",
   phoneNumber: "9085106777",
   customerEmail: "helen@wild.com",
@@ -57,7 +54,6 @@ app.post("/api/new", function(req, res) {
   	else {
   		waitinglist.push(newReservation);
   	}
-    res.json(newReservation);
 });
 
 app.get("/api/tables", function(req, res) {
@@ -66,6 +62,11 @@ app.get("/api/tables", function(req, res) {
 
 app.get("/api/waiting-list", function(req, res) {
     return res.json(waitingList);
+});
+
+app.get("/api/clear", function(req, res){
+    reservations.empty();
+    waitinglist.empty();  
 });
 
 app.listen(port, function() {
