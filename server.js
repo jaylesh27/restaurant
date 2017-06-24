@@ -48,12 +48,13 @@ app.get("/waiting-list", function(req, res){
 app.post("/api/new", function(req, res) {
   	var newReservation = req.body;
 
-  	if(reservations.length < 6){
+  	if(reservations.length < 5){
   		reservations.push(newReservation);
   	}
   	else {
   		waitinglist.push(newReservation);
   	}
+    res.json(reservations);
 });
 
 app.get("/api/tables", function(req, res) {
