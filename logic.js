@@ -12,3 +12,10 @@ $("submit").on("click", function(event) {
         alert("Adding reservation...");
       });
     });
+
+$("clear").on("click", function() {
+    event.preventDefault();
+    $.post("/api/clear").done(function(){
+        alert("Clearing tables...");
+    });
+});
