@@ -2,50 +2,63 @@
 <html>
 <head>
 	<title>Reservation Page</title>
-
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-<div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>...</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</div>
 
 <div class = "container">
-	<div class = "row">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4><span class = "glyphicon glyphicon-list-alt"></span>  Search parameters</h4>
+
+<div class="jumbotron">
+	<h1 class = "text-center">Hot Restaurant</h1>
+	<hr>
+	<p class = "text-center">Make your reservation</p>
+	<div class = "text-center">
+		<a href = "waiting-list.html">
+		<button type = "button" class = "btn btn-lg btn-primary">View tables</button>
+		</a>
+		<a href = "index.html">
+		<button type = "button" class = "btn btn-lg btn-primary">Home</button>
+		</a>
+	</div>
+</div>
+
+
+<div class = "row">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4><span class = "glyphicon glyphicon-list-alt"></span>  Table reservation</h4>
+		</div>
+
+		<div class="panel-body" id = "panel-one">
+			<div class="input-group">
+					<span class="input-group-addon">Name</span>
+					<input type="text" class="form-control" aria-describedby="basic-addon1">				
 			</div>
-
-			<div class="panel-body" id = "panel-one">
-				<div class="input-group">
-  					<span class="input-group-addon">Search terms:</span>
-  					<input type="text" class="form-control" aria-describedby="basic-addon1">				
-				</div>
-				<br>
-				<div class="input-group">
-	  				<span class="input-group-addon">Search terms:</span>
-	  				<input type="text" class="form-control" aria-describedby="basic-addon1">				
-				</div>
-				<br>
-				<div class="input-group">
-  					<span class="input-group-addon">Start year (optional):</span>
-  					<input type="text" class="form-control" aria-describedby="basic-addon1">				
-				</div>
-				<br>
-				<div class="input-group">
-
-  					<span class="input-group-addon">End year (optional):</span>
-  					<input type="text" class="form-control" aria-describedby="basic-addon1">				
-
-				</div>
+			<br>
+			<div class="input-group">
+  				<span class="input-group-addon">Phone number</span>
+  				<input type="text" class="form-control" aria-describedby="basic-addon1">				
 			</div>
+			<br>
+			<div class="input-group">
+					<span class="input-group-addon">Email</span>
+					<input type="text" class="form-control" aria-describedby="basic-addon1">				
+			</div>
+			<br>
+			<div class="input-group">
+					<span class="input-group-addon">Unique ID</span>
+					<input type="text" class="form-control" aria-describedby="basic-addon1">				
+			</div>
+			<br>
+			<button type = "submit" class = "btn btn-primary submit">Submit</button>
 		</div>
 	</div>
+</div>
+
+
 </div>
 
 </body>
