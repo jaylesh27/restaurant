@@ -65,8 +65,8 @@ app.get("/api/waiting-list", function(req, res) {
 });
 
 app.get("/api/clear", function(req, res){
-    reservations.empty();
-    waitinglist.empty();  
+    reservations = [];
+    waitinglist = [];  
 });
 
 app.listen(port, function() {
